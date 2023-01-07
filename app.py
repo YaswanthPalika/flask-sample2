@@ -16,6 +16,7 @@ def process_json():
     if (content_type == 'application/json'):
         json = request.json
         n12 = json["data"]
+        #print(n12)
         s1 = n12.replace("[^a-zA-Z#]", " ")
         # removing short words
         def fun(x): return ' '.join([w for w in x.split() if len(w) > 3])
